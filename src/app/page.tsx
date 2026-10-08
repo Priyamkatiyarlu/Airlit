@@ -64,12 +64,14 @@ export default function Home() {
     sectionId?: string
   ) => {
     setActiveTab(tab);
-    if (sectionId) {
-      setTimeout(() => {
+    setTimeout(() => {
+      if (sectionId) {
         const el = document.getElementById(sectionId);
         if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }
+      } else if (tab === 'home') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 80);
   };
 
   return (
@@ -78,6 +80,7 @@ export default function Home() {
       <Navbar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
+        onNavigateTab={handleNavigateTab}
         onOpenHardwareModal={() => setIsHardwareModalOpen(true)}
       />
 

@@ -7,7 +7,6 @@ import { AirlitLogo } from './AirlitLogo';
 interface FooterProps {
   onNavigateTab: (
     tab: 'home' | 'dashboard' | 'map' | 'science',
-    module?: 'cadi' | 'filter',
     sectionId?: string
   ) => void;
   onOpenHardwareModal: () => void;
@@ -42,7 +41,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenHardwareMod
             </li>
             <li>
               <button
-                onClick={() => onNavigateTab('home', undefined, 'how-it-works')}
+                onClick={() => onNavigateTab('home', 'how-it-works')}
                 className="hover:text-[#087F8C] transition-colors text-left"
               >
                 How It Works (4-Step Guide)
@@ -50,7 +49,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenHardwareMod
             </li>
             <li>
               <button
-                onClick={() => onNavigateTab('home', undefined, 'science')}
+                onClick={() => onNavigateTab('home', 'science')}
                 className="hover:text-[#087F8C] transition-colors text-left"
               >
                 The Science Behind AIRLIT
@@ -58,7 +57,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenHardwareMod
             </li>
             <li>
               <button
-                onClick={() => onNavigateTab('home', undefined, 'analyzer')}
+                onClick={() => onNavigateTab('home', 'analyzer')}
                 className="hover:text-[#087F8C] transition-colors text-left"
               >
                 AIRLIT Analyzer Overview
@@ -66,7 +65,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenHardwareMod
             </li>
             <li>
               <button
-                onClick={() => onNavigateTab('home', undefined, 'insights')}
+                onClick={() => onNavigateTab('home', 'insights')}
                 className="hover:text-[#087F8C] transition-colors text-left"
               >
                 Key Environmental Insights
@@ -101,7 +100,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenHardwareMod
             </li>
             <li>
               <button
-                onClick={() => onNavigateTab('science')}
+                onClick={() => onNavigateTab('home', 'science')}
                 className="hover:text-[#087F8C] transition-colors flex items-center gap-1.5"
               >
                 <BookOpen className="w-3.5 h-3.5 text-[#087F8C]" />
@@ -128,7 +127,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenHardwareMod
             </li>
             <li>
               <button
-                onClick={() => onNavigateTab('science')}
+                onClick={() => onNavigateTab('home', 'science')}
                 className="hover:text-[#087F8C] transition-colors text-left"
               >
                 AAP Equilibrium Math
@@ -136,7 +135,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenHardwareMod
             </li>
             <li>
               <button
-                onClick={() => onNavigateTab('science')}
+                onClick={() => onNavigateTab('home', 'science')}
                 className="hover:text-[#087F8C] transition-colors text-left"
               >
                 Time-Lock Protocol

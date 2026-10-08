@@ -7,24 +7,32 @@ import { AirlitLogo } from './AirlitLogo';
 interface NavbarProps {
   activeTab: 'home' | 'dashboard' | 'map' | 'science';
   setActiveTab: (tab: 'home' | 'dashboard' | 'map' | 'science') => void;
+  onNavigateTab?: (tab: 'home' | 'dashboard' | 'map' | 'science', sectionId?: string) => void;
   onOpenHardwareModal: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   activeTab,
   setActiveTab,
+  onNavigateTab,
   onOpenHardwareModal,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleNavClick = (tab: 'home' | 'dashboard' | 'map' | 'science', sectionId?: string) => {
-    setActiveTab(tab);
     setMobileMenuOpen(false);
-    if (sectionId) {
+    if (onNavigateTab) {
+      onNavigateTab(tab, sectionId);
+    } else {
+      setActiveTab(tab);
       setTimeout(() => {
-        const el = document.getElementById(sectionId);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
+        if (sectionId) {
+          const el = document.getElementById(sectionId);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        } else if (tab === 'home') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 80);
     }
   };
 
@@ -60,12 +68,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           </button>
 
           <button
-            onClick={() => handleNavClick('science')}
-            className={`text-sm font-semibold transition-colors py-1 ${
-              activeTab === 'science'
-                ? 'text-[#087F8C] font-bold border-b-2 border-[#087F8C]'
-                : 'text-[#52606D] hover:text-[#102A43]'
-            }`}
+            onClick={() => handleNavClick('home', 'science')}
+            className="text-sm font-semibold text-[#52606D] hover:text-[#102A43] transition-colors py-1"
           >
             Science
           </button>
@@ -140,10 +144,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             How It Works
           </button>
           <button
-            onClick={() => handleNavClick('science')}
-            className={`block w-full text-left py-2 px-3 rounded-lg text-sm font-semibold ${
-              activeTab === 'science' ? 'bg-[#087F8C]/10 text-[#087F8C]' : 'text-[#102A43]'
-            }`}
+            onClick={() => handleNavClick('home', 'science')}
+            className="block w-full text-left py-2 px-3 rounded-lg text-sm font-semibold text-[#102A43]"
           >
             Science
           </button>
