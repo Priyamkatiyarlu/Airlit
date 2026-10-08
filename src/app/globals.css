@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+:root {
+  --airlit-navy: #102A43;
+  --airlit-teal: #087F8C;
+  --airlit-teal-hover: #06646E;
+  --airlit-aqua: #18B7B0;
+  
+  --airlit-bg: #F5F8F8;
+  --airlit-surface: #FFFFFF;
+  
+  --airlit-text: #102A43;
+  --airlit-text-secondary: #52606D;
+  --airlit-text-muted: #829AB1;
+  
+  --airlit-border: #D9E2EC;
+  
+  --cadi-clean: #22A06B;
+  --cadi-moderate: #E3A008;
+  --cadi-high: #E76F00;
+  --cadi-severe: #D64545;
+  
+  --indicator-red: #D64545;
+  --indicator-yellow: #E3A008;
+  --indicator-blue: #2563EB;
+
+  --font-manrope-var: var(--font-manrope), sans-serif;
+  --font-inter-var: var(--font-inter), sans-serif;
+}
+
+body {
+  background-color: var(--airlit-bg);
+  color: var(--airlit-text);
+  font-family: var(--font-inter-var);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-manrope-var);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* AIRLIT Card Surface Utility */
+.airlit-card {
+  background-color: #ffffff;
+  border: 1px solid #D9E2EC;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(16, 42, 67, 0.04);
+}
+
+.airlit-card-subtle {
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+}
+
+.airlit-badge-teal {
+  background-color: rgba(8, 127, 140, 0.1);
+  color: #087F8C;
+  border: 1px solid rgba(8, 127, 140, 0.2);
+}
+
+/* Custom Leaflet Map Pin Styles */
+.custom-leaflet-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-popup .leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(16, 42, 67, 0.15);
+  border: 1px solid #D9E2EC;
+}
