@@ -15,20 +15,17 @@ const SO2MoleculeIcon = () => (
       <radialGradient id="redSphere" cx="35%" cy="35%" r="65%">
         <stop offset="0%" stopColor="#FF7777" />
         <stop offset="40%" stopColor="#E53E3E" />
-        <stop offset="100%" stopColor="#9B1C1C" />
+        <stop offset="100%" stopColor="#801818" />
       </radialGradient>
       <radialGradient id="yellowSphere" cx="35%" cy="35%" r="65%">
-        <stop offset="0%" stopColor="#FFFA80" />
-        <stop offset="40%" stopColor="#ECC94B" />
-        <stop offset="100%" stopColor="#B7791F" />
+        <stop offset="0%" stopColor="#FFF785" />
+        <stop offset="40%" stopColor="#D99B00" />
+        <stop offset="100%" stopColor="#8A6000" />
       </radialGradient>
     </defs>
-    {/* Left Oxygen */}
-    <circle cx="12" cy="24" r="9" fill="url(#redSphere)" />
-    {/* Right Oxygen */}
-    <circle cx="38" cy="24" r="9" fill="url(#redSphere)" />
-    {/* Center Sulfur */}
-    <circle cx="25" cy="16" r="11" fill="url(#yellowSphere)" />
+    <circle cx="12" cy="22" r="9" fill="url(#redSphere)" />
+    <circle cx="38" cy="22" r="9" fill="url(#redSphere)" />
+    <circle cx="25" cy="15" r="11" fill="url(#yellowSphere)" />
   </svg>
 );
 
@@ -38,20 +35,17 @@ const NO2MoleculeIcon = () => (
       <radialGradient id="redSphereNO2" cx="35%" cy="35%" r="65%">
         <stop offset="0%" stopColor="#FF7777" />
         <stop offset="40%" stopColor="#E53E3E" />
-        <stop offset="100%" stopColor="#9B1C1C" />
+        <stop offset="100%" stopColor="#801818" />
       </radialGradient>
       <radialGradient id="darkRedSphere" cx="35%" cy="35%" r="65%">
-        <stop offset="0%" stopColor="#E53E3E" />
+        <stop offset="0%" stopColor="#D64545" />
         <stop offset="40%" stopColor="#9B1C1C" />
-        <stop offset="100%" stopColor="#521B1B" />
+        <stop offset="100%" stopColor="#4A0E0E" />
       </radialGradient>
     </defs>
-    {/* Left Oxygen */}
-    <circle cx="12" cy="24" r="9" fill="url(#redSphereNO2)" />
-    {/* Right Oxygen */}
-    <circle cx="38" cy="24" r="9" fill="url(#redSphereNO2)" />
-    {/* Center Nitrogen */}
-    <circle cx="25" cy="16" r="10.5" fill="url(#darkRedSphere)" />
+    <circle cx="12" cy="22" r="9" fill="url(#redSphereNO2)" />
+    <circle cx="38" cy="22" r="9" fill="url(#redSphereNO2)" />
+    <circle cx="25" cy="15" r="11" fill="url(#darkRedSphere)" />
   </svg>
 );
 
@@ -60,23 +54,19 @@ const NH3MoleculeIcon = () => (
     <defs>
       <radialGradient id="blueSphereNH3" cx="35%" cy="35%" r="65%">
         <stop offset="0%" stopColor="#79B8FF" />
-        <stop offset="40%" stopColor="#3182CE" />
-        <stop offset="100%" stopColor="#1A365D" />
+        <stop offset="40%" stopColor="#2563EB" />
+        <stop offset="100%" stopColor="#1E3A8A" />
       </radialGradient>
       <radialGradient id="whiteSphereNH3" cx="35%" cy="35%" r="65%">
         <stop offset="0%" stopColor="#FFFFFF" />
-        <stop offset="50%" stopColor="#E2E8F0" />
-        <stop offset="100%" stopColor="#CBD5E0" />
+        <stop offset="60%" stopColor="#E2E8F0" />
+        <stop offset="100%" stopColor="#94A3B8" />
       </radialGradient>
     </defs>
-    {/* Hydrogen 1 */}
-    <circle cx="10" cy="26" r="7.5" fill="url(#whiteSphereNH3)" />
-    {/* Hydrogen 2 */}
-    <circle cx="40" cy="26" r="7.5" fill="url(#whiteSphereNH3)" />
-    {/* Hydrogen 3 */}
-    <circle cx="25" cy="30" r="7.5" fill="url(#whiteSphereNH3)" />
-    {/* Center Nitrogen */}
-    <circle cx="25" cy="15" r="12" fill="url(#blueSphereNH3)" />
+    <circle cx="10" cy="25" r="7" fill="url(#whiteSphereNH3)" />
+    <circle cx="40" cy="25" r="7" fill="url(#whiteSphereNH3)" />
+    <circle cx="25" cy="29" r="7" fill="url(#whiteSphereNH3)" />
+    <circle cx="25" cy="15" r="11.5" fill="url(#blueSphereNH3)" />
   </svg>
 );
 
@@ -186,7 +176,7 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
             <div className="p-4 rounded-2xl bg-[#EFF8F8] border border-[#CCECEB] flex items-center gap-4 transition-all hover:shadow-xs">
               <div className="w-24 h-24 rounded-xl bg-white p-2 border border-[#BCE3E5] flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
                 <img
-                  src="/air-pump.png"
+                  src="/air-pump-v2.png"
                   alt="220V AC Air Pump"
                   className="w-full h-full object-contain"
                 />
@@ -206,7 +196,7 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
             <div className="p-4 rounded-2xl bg-[#F0F7FF] border border-[#BAE6FD] flex items-center gap-4 transition-all hover:shadow-xs">
               <div className="w-24 h-24 rounded-xl bg-white p-2 border border-[#90CDF4] flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
                 <img
-                  src="/air-stone.png"
+                  src="/air-stone-v2.png"
                   alt="Ceramic Air Stone"
                   className="w-full h-full object-contain"
                 />
@@ -226,7 +216,7 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
             <div className="p-4 rounded-2xl bg-[#FFFDF0] border border-[#FEF08A] flex items-center gap-4 transition-all hover:shadow-xs">
               <div className="w-24 h-24 rounded-xl bg-white p-2 border border-[#FDE047] flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
                 <img
-                  src="/tds-meter.png"
+                  src="/tds-meter-v2.png"
                   alt="Handheld TDS-3 Meter"
                   className="w-full h-full object-contain"
                 />
@@ -246,7 +236,7 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
             <div className="p-4 rounded-2xl bg-[#FFF5F5] border border-[#FED7D7] flex items-center gap-4 transition-all hover:shadow-xs">
               <div className="w-24 h-24 rounded-xl bg-white p-2 border border-[#FEB2B2] flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
                 <img
-                  src="/paper-strips.png"
+                  src="/paper-strips-v2.png"
                   alt="Indicator Paper Strips"
                   className="w-full h-full object-contain"
                 />
