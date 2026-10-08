@@ -8,6 +8,78 @@ interface HardwareGuideModalProps {
   onClose: () => void;
 }
 
+// 3D Glossy Molecule SVG Icons matching reference mockup
+const SO2MoleculeIcon = () => (
+  <svg className="w-12 h-10 overflow-visible shrink-0" viewBox="0 0 50 40">
+    <defs>
+      <radialGradient id="redSphere" cx="35%" cy="35%" r="65%">
+        <stop offset="0%" stopColor="#FF7777" />
+        <stop offset="40%" stopColor="#E53E3E" />
+        <stop offset="100%" stopColor="#9B1C1C" />
+      </radialGradient>
+      <radialGradient id="yellowSphere" cx="35%" cy="35%" r="65%">
+        <stop offset="0%" stopColor="#FFFA80" />
+        <stop offset="40%" stopColor="#ECC94B" />
+        <stop offset="100%" stopColor="#B7791F" />
+      </radialGradient>
+    </defs>
+    {/* Left Oxygen */}
+    <circle cx="12" cy="24" r="9" fill="url(#redSphere)" />
+    {/* Right Oxygen */}
+    <circle cx="38" cy="24" r="9" fill="url(#redSphere)" />
+    {/* Center Sulfur */}
+    <circle cx="25" cy="16" r="11" fill="url(#yellowSphere)" />
+  </svg>
+);
+
+const NO2MoleculeIcon = () => (
+  <svg className="w-12 h-10 overflow-visible shrink-0" viewBox="0 0 50 40">
+    <defs>
+      <radialGradient id="redSphereNO2" cx="35%" cy="35%" r="65%">
+        <stop offset="0%" stopColor="#FF7777" />
+        <stop offset="40%" stopColor="#E53E3E" />
+        <stop offset="100%" stopColor="#9B1C1C" />
+      </radialGradient>
+      <radialGradient id="darkRedSphere" cx="35%" cy="35%" r="65%">
+        <stop offset="0%" stopColor="#E53E3E" />
+        <stop offset="40%" stopColor="#9B1C1C" />
+        <stop offset="100%" stopColor="#521B1B" />
+      </radialGradient>
+    </defs>
+    {/* Left Oxygen */}
+    <circle cx="12" cy="24" r="9" fill="url(#redSphereNO2)" />
+    {/* Right Oxygen */}
+    <circle cx="38" cy="24" r="9" fill="url(#redSphereNO2)" />
+    {/* Center Nitrogen */}
+    <circle cx="25" cy="16" r="10.5" fill="url(#darkRedSphere)" />
+  </svg>
+);
+
+const NH3MoleculeIcon = () => (
+  <svg className="w-12 h-10 overflow-visible shrink-0" viewBox="0 0 50 40">
+    <defs>
+      <radialGradient id="blueSphereNH3" cx="35%" cy="35%" r="65%">
+        <stop offset="0%" stopColor="#79B8FF" />
+        <stop offset="40%" stopColor="#3182CE" />
+        <stop offset="100%" stopColor="#1A365D" />
+      </radialGradient>
+      <radialGradient id="whiteSphereNH3" cx="35%" cy="35%" r="65%">
+        <stop offset="0%" stopColor="#FFFFFF" />
+        <stop offset="50%" stopColor="#E2E8F0" />
+        <stop offset="100%" stopColor="#CBD5E0" />
+      </radialGradient>
+    </defs>
+    {/* Hydrogen 1 */}
+    <circle cx="10" cy="26" r="7.5" fill="url(#whiteSphereNH3)" />
+    {/* Hydrogen 2 */}
+    <circle cx="40" cy="26" r="7.5" fill="url(#whiteSphereNH3)" />
+    {/* Hydrogen 3 */}
+    <circle cx="25" cy="30" r="7.5" fill="url(#whiteSphereNH3)" />
+    {/* Center Nitrogen */}
+    <circle cx="25" cy="15" r="12" fill="url(#blueSphereNH3)" />
+  </svg>
+);
+
 export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
@@ -48,19 +120,14 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
             {/* Sulfur Dioxide SO2 */}
             <div className="p-4 rounded-xl bg-[#FFF5F5] border border-[#FED7D7] space-y-3 flex flex-col justify-between">
-              <div className="flex items-center gap-2.5">
-                {/* 3D Molecule Visual for SO2 */}
-                <div className="w-8 h-8 rounded-full bg-white border border-[#FEB2B2] flex items-center justify-center shrink-0 shadow-2xs">
-                  <span className="w-3.5 h-3.5 rounded-full bg-[#E53E3E] inline-block border border-white" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#ECC94B] inline-block -ml-1 border border-white" />
-                  <span className="w-3.5 h-3.5 rounded-full bg-[#E53E3E] inline-block -ml-1 border border-white" />
-                </div>
-                <div className="font-bold text-[#C53030] text-sm">
+              <div className="flex items-center gap-3">
+                <SO2MoleculeIcon />
+                <div className="font-bold text-[#C53030] text-sm leading-tight">
                   Sulfur Dioxide (SO₂)
                 </div>
               </div>
 
-              <div className="bg-white rounded-lg p-2 border border-[#FEB2B2]/60 font-mono text-[11px] text-[#2D3748] text-center font-semibold">
+              <div className="bg-white rounded-lg p-2 border border-[#FEB2B2]/60 font-mono text-[11px] text-[#2D3748] text-center font-semibold shadow-2xs">
                 SO₂ + H₂O → H₂SO₃ → H⁺ + HSO₃⁻
               </div>
 
@@ -71,19 +138,14 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
 
             {/* Nitrogen Dioxide NO2 */}
             <div className="p-4 rounded-xl bg-[#FFF5F5] border border-[#FED7D7] space-y-3 flex flex-col justify-between">
-              <div className="flex items-center gap-2.5">
-                {/* 3D Molecule Visual for NO2 */}
-                <div className="w-8 h-8 rounded-full bg-white border border-[#FEB2B2] flex items-center justify-center shrink-0 shadow-2xs">
-                  <span className="w-3.5 h-3.5 rounded-full bg-[#E53E3E] inline-block border border-white" />
-                  <span className="w-3 h-3 rounded-full bg-[#3182CE] inline-block -ml-1 border border-white" />
-                  <span className="w-3.5 h-3.5 rounded-full bg-[#E53E3E] inline-block -ml-1 border border-white" />
-                </div>
-                <div className="font-bold text-[#C53030] text-sm">
+              <div className="flex items-center gap-3">
+                <NO2MoleculeIcon />
+                <div className="font-bold text-[#C53030] text-sm leading-tight">
                   Nitrogen Dioxide (NO₂)
                 </div>
               </div>
 
-              <div className="bg-white rounded-lg p-2 border border-[#FEB2B2]/60 font-mono text-[11px] text-[#2D3748] text-center font-semibold">
+              <div className="bg-white rounded-lg p-2 border border-[#FEB2B2]/60 font-mono text-[11px] text-[#2D3748] text-center font-semibold shadow-2xs">
                 2NO₂ + H₂O → HNO₂ + HNO₃
               </div>
 
@@ -94,18 +156,14 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
 
             {/* Ammonia NH3 */}
             <div className="p-4 rounded-xl bg-[#F0F7FF] border border-[#BAE6FD] space-y-3 flex flex-col justify-between">
-              <div className="flex items-center gap-2.5">
-                {/* 3D Molecule Visual for NH3 */}
-                <div className="w-8 h-8 rounded-full bg-white border border-[#90CDF4] flex items-center justify-center shrink-0 shadow-2xs">
-                  <span className="w-3.5 h-3.5 rounded-full bg-[#3182CE] inline-block border border-white" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#CBD5E0] inline-block -ml-1 border border-white" />
-                </div>
-                <div className="font-bold text-[#2B6CB0] text-sm">
+              <div className="flex items-center gap-3">
+                <NH3MoleculeIcon />
+                <div className="font-bold text-[#2B6CB0] text-sm leading-tight">
                   Ammonia Gas (NH₃)
                 </div>
               </div>
 
-              <div className="bg-white rounded-lg p-2 border border-[#90CDF4]/60 font-mono text-[11px] text-[#2D3748] text-center font-semibold">
+              <div className="bg-white rounded-lg p-2 border border-[#90CDF4]/60 font-mono text-[11px] text-[#2D3748] text-center font-semibold shadow-2xs">
                 NH₃ + H₂O → NH₄⁺ + OH⁻
               </div>
 
@@ -126,7 +184,7 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Card 1: 220V AC Air Pump */}
             <div className="p-4 rounded-2xl bg-[#EFF8F8] border border-[#CCECEB] flex items-center gap-4 transition-all hover:shadow-xs">
-              <div className="w-24 h-24 rounded-xl bg-white p-2 border border-[#BCE3E5] flex items-center justify-center shrink-0 shadow-2xs">
+              <div className="w-24 h-24 rounded-xl bg-white p-2 border border-[#BCE3E5] flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
                 <img
                   src="/air-pump.png"
                   alt="220V AC Air Pump"
@@ -146,7 +204,7 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
 
             {/* Card 2: Ceramic Air Stone */}
             <div className="p-4 rounded-2xl bg-[#F0F7FF] border border-[#BAE6FD] flex items-center gap-4 transition-all hover:shadow-xs">
-              <div className="w-24 h-24 rounded-xl bg-white p-2 border border-[#90CDF4] flex items-center justify-center shrink-0 shadow-2xs">
+              <div className="w-24 h-24 rounded-xl bg-white p-2 border border-[#90CDF4] flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
                 <img
                   src="/air-stone.png"
                   alt="Ceramic Air Stone"
@@ -166,7 +224,7 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
 
             {/* Card 3: Handheld TDS-3 Meter */}
             <div className="p-4 rounded-2xl bg-[#FFFDF0] border border-[#FEF08A] flex items-center gap-4 transition-all hover:shadow-xs">
-              <div className="w-24 h-24 rounded-xl bg-white p-2 border border-[#FDE047] flex items-center justify-center shrink-0 shadow-2xs">
+              <div className="w-24 h-24 rounded-xl bg-white p-2 border border-[#FDE047] flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
                 <img
                   src="/tds-meter.png"
                   alt="Handheld TDS-3 Meter"
@@ -186,7 +244,7 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
 
             {/* Card 4: Indicator Paper Strips */}
             <div className="p-4 rounded-2xl bg-[#FFF5F5] border border-[#FED7D7] flex items-center gap-4 transition-all hover:shadow-xs">
-              <div className="w-24 h-24 rounded-xl bg-white p-2 border border-[#FEB2B2] flex items-center justify-center shrink-0 shadow-2xs">
+              <div className="w-24 h-24 rounded-xl bg-white p-2 border border-[#FEB2B2] flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
                 <img
                   src="/paper-strips.png"
                   alt="Indicator Paper Strips"
@@ -219,4 +277,3 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
     </div>
   );
 };
-
