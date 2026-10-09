@@ -19,9 +19,12 @@ export const metadata: Metadata = {
   description: "A dual-phase environmental kit designed to trap invisible industrial gases (SO2, NO2, NH3), map acid deposition hazards, and audit home air purifiers.",
   keywords: ["AIRLIT", "CADI", "Environmental Dashboard", "Liquid Wet Scrubbing", "Atmospheric Acidification Potential", "Citizen Science", "AQI Gas Monitor"],
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/apple-icon.png",
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon.png', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
   },
 };
 
@@ -35,6 +38,11 @@ export default function RootLayout({
       lang="en"
       className={`${manrope.variable} ${inter.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+      </head>
       <body className="min-h-full flex flex-col bg-[#F5F8F8] text-[#102A43] font-sans">
         {children}
       </body>
