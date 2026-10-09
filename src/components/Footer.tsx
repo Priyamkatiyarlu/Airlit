@@ -21,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenHardwareMod
           <AirlitLogo size="md" showTagline={true} />
 
           <p className="text-xs text-[#52606D] leading-relaxed max-w-sm">
-            AIRLIT scales down complex laboratory wet-scrubbing instrumentation into an accessible citizen-science platform to trap gaseous pollution, map acidification hazards, and audit air purifiers.
+            AIRLIT scales down complex laboratory wet-scrubbing instrumentation into an accessible citizen-science platform to trap gaseous pollution for evaluation and map acidification hazards.
           </p>
         </div>
 
