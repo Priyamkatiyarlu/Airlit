@@ -126,20 +126,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenHardwareMod
               </button>
             </li>
             <li>
-              <button
-                onClick={() => onNavigateTab('home', 'science')}
-                className="hover:text-[#087F8C] transition-colors text-left"
-              >
+              <span className="text-[#627D98] cursor-default">
                 AAP Equilibrium Math
-              </button>
+              </span>
             </li>
             <li>
-              <button
-                onClick={() => onNavigateTab('home', 'science')}
-                className="hover:text-[#087F8C] transition-colors text-left"
-              >
+              <span className="text-[#627D98] cursor-default">
                 Time-Lock Protocol
-              </button>
+              </span>
             </li>
           </ul>
 
