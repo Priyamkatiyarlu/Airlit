@@ -56,10 +56,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               Can't See.
             </h1>
 
-            {/* Subtext with high contrast bold font and legibility backing */}
             <p className="text-base sm:text-lg text-[#102A43] font-medium leading-relaxed drop-shadow-sm">
-              A dual-phase environmental kit designed to trap invisible industrial gases, map acid
-              deposition hazards, and audit home air purifiers using stable, un-driftable chemistry.
+              A dual-phase environmental kit designed to trap invisible industrial gases for evaluation and map acid deposition hazards using stable, un-driftable chemistry.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
