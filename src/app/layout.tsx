@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   title: "AIRLIT — Environmental Liquid Scrubbing & CADI Platform",
   description: "A dual-phase environmental kit designed to trap invisible industrial gases (SO2, NO2, NH3), map acid deposition hazards, and audit home air purifiers.",
   keywords: ["AIRLIT", "CADI", "Environmental Dashboard", "Liquid Wet Scrubbing", "Atmospheric Acidification Potential", "Citizen Science", "AQI Gas Monitor"],
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
