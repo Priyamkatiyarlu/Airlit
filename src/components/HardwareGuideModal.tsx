@@ -176,7 +176,7 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
             <div className="p-4 rounded-2xl bg-[#EFF8F8] border border-[#CCECEB] flex items-center gap-4 transition-all hover:shadow-xs">
               <div className="w-24 h-24 rounded-xl bg-white p-2 border border-[#BCE3E5] flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
                 <img
-                  src="/air-pump-v2.png"
+                  src="/air-pump-card1.png"
                   alt="220V AC Air Pump"
                   className="w-full h-full object-contain"
                 />
@@ -196,7 +196,7 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
             <div className="p-4 rounded-2xl bg-[#F0F7FF] border border-[#BAE6FD] flex items-center gap-4 transition-all hover:shadow-xs">
               <div className="w-24 h-24 rounded-xl bg-white p-2 border border-[#90CDF4] flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
                 <img
-                  src="/air-stone-v2.png"
+                  src="/air-stone-card2.png"
                   alt="Ceramic Air Stone"
                   className="w-full h-full object-contain"
                 />
@@ -216,7 +216,7 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
             <div className="p-4 rounded-2xl bg-[#FFFDF0] border border-[#FEF08A] flex items-center gap-4 transition-all hover:shadow-xs">
               <div className="w-24 h-24 rounded-xl bg-white p-2 border border-[#FDE047] flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
                 <img
-                  src="/tds-meter-v2.png"
+                  src="/tds-meter-card3.png"
                   alt="Handheld TDS-3 Meter"
                   className="w-full h-full object-contain"
                 />
@@ -236,7 +236,7 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
             <div className="p-4 rounded-2xl bg-[#FFF5F5] border border-[#FED7D7] flex items-center gap-4 transition-all hover:shadow-xs">
               <div className="w-24 h-24 rounded-xl bg-white p-2 border border-[#FEB2B2] flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
                 <img
-                  src="/paper-strips-v2.png"
+                  src="/paper-strips-card4.png"
                   alt="Indicator Paper Strips"
                   className="w-full h-full object-contain"
                 />
