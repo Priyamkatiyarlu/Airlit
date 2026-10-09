@@ -163,7 +163,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   </div>
                   <div className="py-4 flex items-center justify-center min-h-[210px]">
                     <img
-                      src="/step-3.png"
+                      src="/indicatorstrips.png"
                       alt="Read Endpoints"
                       className="max-h-48 w-auto object-contain mx-auto"
                     />
