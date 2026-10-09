@@ -196,7 +196,7 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
             <div className="p-2.5 sm:p-3 rounded-xl bg-[#F0F7FF] border border-[#BAE6FD] flex items-center gap-3 transition-all hover:shadow-xs">
               <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-lg bg-white p-1.5 border border-[#90CDF4] flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
                 <img
-                  src="/stone.png"
+                  src="/stoneimage.png"
                   alt="Ceramic Air Stone"
                   className="w-full h-full object-contain"
                 />
@@ -216,7 +216,7 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
             <div className="p-2.5 sm:p-3 rounded-xl bg-[#FFFDF0] border border-[#FEF08A] flex items-center gap-3 transition-all hover:shadow-xs">
               <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-lg bg-white p-1.5 border border-[#FDE047] flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
                 <img
-                  src="/tds-metre.png"
+                  src="/tdsmeter.png"
                   alt="Handheld TDS-3 Meter"
                   className="w-full h-full object-contain"
                 />
@@ -236,7 +236,7 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
             <div className="p-2.5 sm:p-3 rounded-xl bg-[#FFF5F5] border border-[#FED7D7] flex items-center gap-3 transition-all hover:shadow-xs">
               <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-lg bg-white p-1.5 border border-[#FEB2B2] flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
                 <img
-                  src="/paperstrips.png"
+                  src="/indicatorstrips.png"
                   alt="Indicator Paper Strips"
                   className="w-full h-full object-contain"
                 />
