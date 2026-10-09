@@ -168,7 +168,7 @@ export const HardwareGuideModal: React.FC<HardwareGuideModalProps> = ({ isOpen, 
         <div className="space-y-2">
           <h4 className="text-[11px] font-mono font-bold text-[#102A43] uppercase tracking-wider flex items-center gap-1.5">
             <Settings className="w-3.5 h-3.5 text-[#087F8C]" />
-            BILL OF MATERIALS &amp; HARDWARE SPECS
+            MATERIALS &amp; HARDWARE SPECS
           </h4>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
